@@ -1,4 +1,4 @@
-# gym-bro
+# GymBro
 
 ## Project setup
 ```
