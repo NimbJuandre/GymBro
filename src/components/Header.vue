@@ -37,10 +37,9 @@
 
 <script>
 import firebase from "firebase";
-import { fa } from "vuetify/lib/locale";
 
 export default {
-  name: "Header", 
+  name: "Header",
   data: () => ({
     drawer: false,
     group: null,
@@ -50,18 +49,6 @@ export default {
       firebase.auth().signOut();
     }
   },
-  // beforeMount() {
-  //   firebase.auth().onAuthStateChanged((user) => {
-  //     // if not logged in redirect to login page
-  //     if (!user) {
-  //       router.replace('/login')
-  //     }
-  //     // if logged in (user available)  redirect to Home
-  //     else if (route.path == '/login' || route.path == '/register') {
-  //       router.replace('/')
-  //     }
-  //   })
-  // },
   watch: {
     group() {
       this.drawer = false

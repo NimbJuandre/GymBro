@@ -15,6 +15,16 @@ const routes = [
     name: 'Login',
     component: () => import('../views/Login.vue')
   },
+  {
+    path: '/Generate',
+    name: 'Generate',
+    component: () => import('../views/Generate.vue')
+  },
+  {
+    path: '/Log',
+    name: 'Log',
+    component: () => import('../views/Log.vue')
+  },
 ];
 
 const router = new VueRouter({

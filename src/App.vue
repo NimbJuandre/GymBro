@@ -1,7 +1,11 @@
 <template>
   <v-app>
-    <Header v-if="authenticated" />
-    <router-view />
+    <div class="header">
+      <Header v-if="authenticated" />
+    </div>
+    <div class="page">
+      <router-view />
+    </div>
   </v-app>
 </template>
 
@@ -10,12 +14,12 @@ import firebase from "firebase";
 import Header from "./components/Header.vue";
 export default {
   name: "App",
-  data: () => ({
-    authenticated: true,
-  }),
   components: {
     Header
   },
+  data: () => ({
+    authenticated: true,
+  }),
   beforeMount() {
     firebase.auth().onAuthStateChanged((user) => {
       // if not logged in redirect to login page
@@ -31,7 +35,15 @@ export default {
     })
   },
   methods: {
-    
+
   },
 };
 </script>
+<style scoped>
+.header {
+  height: 64px;
+}
+.page{
+  width: 100%;
+}
+</style>
