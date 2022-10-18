@@ -1,21 +1,22 @@
 <template>
-  <v-app>
-    <div class="header">
-      <Header v-if="authenticated" />
-    </div>
-    <div class="page">
-      <router-view />
-    </div>
+  <v-app >
+    <Header v-if="authenticated" />
+    <AppContent />
+    <Footer v-if="authenticated" />
   </v-app>
 </template>
 
 <script>
 import firebase from "firebase";
 import Header from "./components/Header.vue";
+import AppContent from "./components/AppContent.vue";
+import Footer from "./components/Footer.vue";
 export default {
   name: "App",
   components: {
-    Header
+    Header,
+    AppContent,
+    Footer,
   },
   data: () => ({
     authenticated: true,
@@ -39,11 +40,14 @@ export default {
   },
 };
 </script>
-<style scoped>
-.header {
-  height: 64px;
-}
-.page{
+
+<style>
+#page {
   width: 100%;
+}
+
+.routerlink {
+  text-decoration: none;
+  color: inherit !important;
 }
 </style>

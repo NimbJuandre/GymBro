@@ -1,61 +1,23 @@
 <template>
-  <div>
-    <v-app-bar color="deep-purple accent-4" dark app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <!-- <v-toolbar-title>My files</v-toolbar-title> -->
-
-      <v-spacer></v-spacer>
-      <v-btn @click="Logout" rounded color="primary" dark>
-        Logout
-      </v-btn>
-    </v-app-bar>
-
-    <v-navigation-drawer v-model="drawer" absolute temporary>
-      <v-list nav dense>
-        <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
-          <v-list-item>
-            <v-list-item-title>Foo</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Bar</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Fizz</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Buzz</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
-  </div>
+  <v-app-bar fixed app elevation="10" color="white">
+    <v-toolbar-title>Title</v-toolbar-title>
+    <v-spacer></v-spacer>
+    <v-btn icon title="Click to logout" @click="Logout">
+      <v-icon>mdi-logout</v-icon>
+    </v-btn>
+  </v-app-bar>
 </template>
-
 <script>
 import firebase from "firebase";
 
 export default {
   name: "Header",
   data: () => ({
-    drawer: false,
-    group: null,
   }),
   methods: {
     Logout() {
       firebase.auth().signOut();
     }
   },
-  watch: {
-    group() {
-      this.drawer = false
-    },
-  },
 };
 </script>
-  
-
-
