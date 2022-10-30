@@ -2,12 +2,12 @@ import * as firebase from 'firebase/app';
 import 'firebase/auth';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCL3KtIUEXgJfNBsNZ_IhIeo_Y4AHWt8JE",
-  authDomain: "gymbro-61f80.firebaseapp.com",
-  projectId: "gymbro-61f80",
-  storageBucket: "gymbro-61f80.appspot.com",
-  messagingSenderId: "867847316932",
-  appId: "1:867847316932:web:9f9f65d5dda799bef33091"
+  apiKey: "xxxxxxxxxxxxxxxxx",
+  authDomain: "xxxxxxxxxxxxxxxxx",
+  projectId: "xxxxxxxxxxxxxxxxx",
+  storageBucket: "xxxxxxxxxxxxxxxxx",
+  messagingSenderId: "xxxxxxxxxxxxxxxxx",
+  appId: "xxxxxxxxxxxxxxxxx"
 };
 
   export default {

@@ -1,5 +1,5 @@
 <template>
-  <v-bottom-navigation app v-model="value">
+  <v-bottom-navigation class="bottom-nav" app v-model="value">
     <v-btn value="profile">
       <router-link class="routerlink" to="/">
         <span>Profile</span>
@@ -19,7 +19,7 @@
       </router-link>
     </v-btn>
     <v-btn value="exercises">
-      <router-link class="routerlink" to="/Generate">
+      <router-link class="routerlink" to="/Exercises">
         <span>Exercises</span>
         <v-icon>mdi-arm-flex</v-icon>
       </router-link>
@@ -33,3 +33,8 @@ export default {
   data: () => ({ value: 'recent' }),
 };
 </script>
+<style>
+.bottom-nav {
+  height: auto !important;
+}
+</style>

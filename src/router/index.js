@@ -1,8 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import ProfileView from "../views/ProfileView.vue";
-import HistoryView from "../views/HistoryView.vue";
-import GenerateView from "../views/GenerateView.vue";
 
 Vue.use(VueRouter);
 
@@ -10,12 +7,12 @@ const routes = [
   {
     path: "/",
     name: "Profile",
-    component: ProfileView,
+    component: () => import('../views/ProfileView.vue'),
   },
   {
     path: "/History",
     name: "History",
-    component: HistoryView,
+    component: () => import('../views/HistoryView.vue'),
   },
   {
     path: '/login',
@@ -23,9 +20,14 @@ const routes = [
     component: () => import('../views/Login.vue')
   },
   {
-    path: '/Generate',
-    name: 'Generate',
-    component: GenerateView,
+    path: '/Exercise',
+    name: 'Exercise',
+    component: () => import('../views/Exercises/ExerciseView.vue'),
+  },
+  {
+    path: '/Exercises',
+    name: 'Exercises',
+    component: () => import('../views/Exercises/ExercisesView.vue'),
   },
   {
     path: '/Log',

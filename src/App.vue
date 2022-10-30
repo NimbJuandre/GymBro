@@ -1,6 +1,5 @@
 <template>
-  <v-app >
-    <Header v-if="authenticated" />
+  <v-app>
     <AppContent />
     <Footer v-if="authenticated" />
   </v-app>
@@ -8,13 +7,11 @@
 
 <script>
 import firebase from "firebase";
-import Header from "./components/Header.vue";
 import AppContent from "./components/AppContent.vue";
 import Footer from "./components/Footer.vue";
 export default {
   name: "App",
   components: {
-    Header,
     AppContent,
     Footer,
   },
