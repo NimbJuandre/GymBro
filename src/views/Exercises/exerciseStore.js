@@ -7,7 +7,7 @@ var exercisesObj = [
         Category: [
             'Machine/Other'
         ],
-        ImagePath: require('./images/thumbnails/SmithMachinePress.png'),
+        ImagePath: require('@/views/Exercises/images/thumbnails/SmithMachinePress.png'),
     },
     {
         Name: 'Incline Bench Press (Smith Machine)',
@@ -17,7 +17,7 @@ var exercisesObj = [
         Category: [
             'Machine/Other'
         ],
-        ImagePath: require('./images/thumbnails/InclineSmithMachinePress.png')
+        ImagePath: require('@/views/Exercises/images/thumbnails/InclineSmithMachinePress.png')
     }
 ]
 
